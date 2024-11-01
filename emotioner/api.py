@@ -7,6 +7,7 @@ from pydantic import BaseModel, constr
 
 from ai_func.utils import generate_ai_output
 from emotioner.utils import parse_prompt
+from global_vars import Var
 
 emo_router = APIRouter(tags=['emotioner'])
 
@@ -56,7 +57,7 @@ def emotioner(emotioner_data: EmotionerData):
     random_file = random.choice(emotion_files)
     print(random_file)
     print(random_file)
-    file_path = f'/{emotion_folder}/{random_file}'
+    file_path = f'{Var.base_url}/bgm_col/{emotion_folder}/{random_file}'
     return {
         'bgm': file_path,
         'emotion': final_emotion
