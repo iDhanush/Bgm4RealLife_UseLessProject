@@ -15,6 +15,7 @@ class EmotionerData(BaseModel):
     spoken_text: str
     lang: constr(pattern='^(mal|eng)$')
 
+
 emotion_dict = {
     'angry': 'angry',
     'disgusting': 'disgusting',
@@ -24,6 +25,8 @@ emotion_dict = {
     'love': 'love',
     'superb and existing entry': 'mass_entry',
 }
+
+
 @emo_router.post('/get_emotion')
 def emotioner(emotioner_data: EmotionerData):
     spoken_text = emotioner_data.spoken_text
