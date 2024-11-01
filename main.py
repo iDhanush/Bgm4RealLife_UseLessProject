@@ -1,6 +1,10 @@
 import uvicorn
+from starlette.staticfiles import StaticFiles
+
 from server import app
 from emotioner.api import emo_router
 
 app.include_router(emo_router)
-uvicorn.run(app, port=8000)
+# static files
+app.mount("/bgm_col", StaticFiles(directory="bgm_col"), name="bgm_col")
+uvicorn.run(app, host='0.0.0.0', port=80)
