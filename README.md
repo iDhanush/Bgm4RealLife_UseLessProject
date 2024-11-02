@@ -39,12 +39,11 @@ For Software:
 # Installation
 <h4>Backend</h4>
 git clone https://github.com/iDhanush/Bgm4RealLife_UseLessProject.git <br>
-cd Bgm4RealLife_UseLessProject<br>
-pip install -r requirements.txt<br>
-add .env file<br>
-GEMINI_API_KEY=XXX<br>
-BASE_URL=HTTPS://BASEURL/<br>
-
+cd Bgm4RealLife_UseLessProject <br>
+pip install -r requirements.txt <br>
+add .env file <br>
+GEMINI_API_KEY=XXX <br>
+BASE_URL=HTTPS://BASEURL/ <br>
 <br>
 # Run<br>
 uvicorn main:app<br>
