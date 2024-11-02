@@ -44,9 +44,17 @@ pip install -r requirements.txt <br>
 add .env file <br>
 GEMINI_API_KEY=XXX <br>
 BASE_URL=HTTPS://BASEURL/ <br>
-<br>
 # Run<br>
 uvicorn main:app<br>
+<BR>
+<BR>
+
+<h4>frontEnd</h4>
+cd frontend <br>
+npm i
+
+# Run<br>
+npm run dev<br>
 
 ### Project Documentation
 For Software:
