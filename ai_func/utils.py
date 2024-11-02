@@ -3,7 +3,7 @@ import google.generativeai as genai
 from google.generativeai import GenerativeModel
 
 genai.configure(api_key=Var.gemini_api_key)
-model = GenerativeModel("gemini-1.5-flash")
+model = GenerativeModel("gemini-1.5-pro")
 
 
 def generate_ai_output(prompt):
