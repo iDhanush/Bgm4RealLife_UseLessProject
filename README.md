@@ -23,7 +23,7 @@ The project focues on giving accurate music to the recording.
  What keeps our life from becoming an intresting movie is the bgm.
 
 ### The Solution (that nobody asked for)
-So we just did the obvious. We created somthing That can give us the missing Bgm.
+So we just did the obvious. We created somthing That can give us the missing Bgm in All Our lifes.
 ## Technical Details
 ### Technologies/Components Used
 For Software:
@@ -64,6 +64,7 @@ For Software:
 
 ### Project Demo
 # Video
+[![Watch the Demo Video]](https://drive.google.com/file/d/1l6GqhWRUmCeTMUkTsya7UfUg7abNAEjf/view?usp=sharing)
 https://drive.google.com/file/d/1l6GqhWRUmCeTMUkTsya7UfUg7abNAEjf/view?usp=sharing
 
 
