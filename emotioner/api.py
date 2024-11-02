@@ -31,6 +31,11 @@ emotion_dict = {
 @emo_router.post('/get_emotion')
 def emotioner(emotioner_data: EmotionerData):
     spoken_text = emotioner_data.spoken_text
+    if not spoken_text:
+        return {
+            'bgm': f'{Var.base_url}/bgm_col/nuetral/interstellar.mp3',
+            'emotion': 'nuetral'
+        }
     lang = emotioner_data.lang
     prompt = parse_prompt(spoken_text, lang)
     print(prompt)
@@ -42,7 +47,7 @@ def emotioner(emotioner_data: EmotionerData):
         text_json[key.strip()] = value.strip()
     print('final', text_json)
 
-    talkig_about = text_json.get('talking about')
+    talkig_about = text_json.get('talking_about')
 
     if talkig_about == 'himself':
         final_emotion = text_json.get('emotion')
