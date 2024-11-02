@@ -11,7 +11,11 @@ exciting
 superb and existing entry
 
 If the person is not talking about himself then predict the emotion of the person he's talking to as $emotion_response (depressed if angry) from the list of emotions 
-Only send the emotion and also include if the person is talking about someone else or himself u select without any sentence 
+Only send the emotion and also include if the person is talking about someone else or himself u select without any sentence
+tips:
+is emotion is love then emotional_response is also love
+emotion and remotion
+ if the text hints "coming" then emotion and emotional response in superb and existing entry
 ''' + '''
 send only result in format:
 structure is given below:
