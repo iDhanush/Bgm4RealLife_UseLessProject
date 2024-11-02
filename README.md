@@ -38,16 +38,16 @@ For Software:
    Webapp using react frontend communicating with FastAPI backend
 # Installation
 <h4>Backend</h4>
-git clone https://github.com/iDhanush/Bgm4RealLife_UseLessProject.git
-cd Bgm4RealLife_UseLessProject
-pip install -r requirements.txt
-add .env file
-GEMINI_API_KEY=XXX
-BASE_URL=HTTPS://BASEURL/
+git clone https://github.com/iDhanush/Bgm4RealLife_UseLessProject.git <br>
+cd Bgm4RealLife_UseLessProject<br>
+pip install -r requirements.txt<br>
+add .env file<br>
+GEMINI_API_KEY=XXX<br>
+BASE_URL=HTTPS://BASEURL/<br>
 
-
-# Run
-uvicorn main:app
+<br>
+# Run<br>
+uvicorn main:app<br>
 
 ### Project Documentation
 For Software:
