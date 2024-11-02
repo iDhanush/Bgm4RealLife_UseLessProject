@@ -1,7 +1,6 @@
 import json
 import os
 import random
-
 from fastapi import APIRouter
 from pydantic import BaseModel, constr
 
@@ -22,6 +21,7 @@ emotion_dict = {
     'disgusting': 'disgusting',
     'happy': 'happy',
     'depressed and sad': 'sad',
+    'depressed': 'sad',
     'exciting': 'exciting',
     'love': 'love',
     'superb and existing entry': 'mass_entry',
@@ -35,12 +35,13 @@ def emotioner(emotioner_data: EmotionerData):
     prompt = parse_prompt(spoken_text, lang)
     print(prompt)
     text = generate_ai_output(prompt)
-    print(text)
-    text = text.split('RESULT: ')[-1]
-    text = text.strip("`")
-    text = text.strip("json")
-    print('final', text)
-    text_json = json.loads(text)
+    text = str(text)
+    text_json = {}
+    for line in text.strip().splitlines():
+        key, value = line.split('=', 1)  # Split on the first '=' only
+        text_json[key.strip()] = value.strip()
+    print('final', text_json)
+
     talkig_about = text_json.get('talking about')
 
     if talkig_about == 'himself':

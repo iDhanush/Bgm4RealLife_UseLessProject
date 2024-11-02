@@ -13,11 +13,10 @@ superb and existing entry
 If the person is not talking about himself then predict the emotion of the person he's talking to as $emotion_response (depressed if angry) from the list of emotions 
 Only send the emotion and also include if the person is talking about someone else or himself u select without any sentence 
 ''' + '''
-
-SEND AS DICT WITHOUT ANY OTHER TEXT without any markup
-output_structure (all lowercase & only json no other text)
-RESULT: {"emotion": "$emotion" 
-"emotional response": "$emotional_response"
-"talking about": "$himself | $someone"
-}'''
+send only result in format:
+structure is given below:
+emotion=$emotion
+emotional_response=$emotional_response
+talking_about=$himself | $someone
+'''
     return prompt
