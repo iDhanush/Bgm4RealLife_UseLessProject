@@ -52,9 +52,7 @@ uvicorn main:app<br>
 <h4>frontEnd</h4>
 cd frontend <br>
 npm i
-
-# Run<br>
-npm run dev<br>
+npm run dev
 
 ### Project Documentation
 For Software:
