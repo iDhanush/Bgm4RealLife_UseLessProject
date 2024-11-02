@@ -17,13 +17,23 @@ An AI enabled webapp which is always listening to the conversations around it an
 
 
 ### Project Description
-The project focues on giving accurate music to the recording.
+An AI enabled webapp which is always listening to the conversations around it and determining the emotion and gives an apt background music (BGM) for the situation
+the app can detect different emotions like:
+- happy
+- sad
+- excited
+- disgusting
+- mass entry
+- depressed
+- love
+and many more
 
 ### The Problem (that doesn't exist)
  What keeps our life from becoming an intresting movie is the bgm.
 
 ### The Solution (that nobody asked for)
 So we just did the obvious. We created somthing That can give us the missing Bgm in All Our lifes.
+
 ## Technical Details
 ### Technologies/Components Used
 For Software:
