@@ -1,4 +1,4 @@
-import uvicorn
+
 from starlette.staticfiles import StaticFiles
 
 from server import app
