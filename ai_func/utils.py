@@ -22,6 +22,7 @@ import aiohttp
 
 gen_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key="
 
+
 async def generate_ai_output(prompt):
     gemini_api_key = random.choice(Var.gemini_api_keys)
     url = gen_url + gemini_api_key.strip()
@@ -35,6 +36,7 @@ async def generate_ai_output(prompt):
                     # Adjust parsing to match the expected response structure
                     return data["candidates"][0]['content']["parts"][0]["text"]
                 except KeyError as e:
+                    print(f"AI ERROR: Unexpected response structure: {await response.text()}")
                     raise HTTPException(
                         status_code=500,
                         detail=f"AI ERROR: Unexpected response structure: {await response.text()}",
@@ -42,6 +44,7 @@ async def generate_ai_output(prompt):
             else:
                 # Await response.text() properly
                 error_detail = await response.text()
+                print(f"AI ERROR: {error_detail}")
                 raise HTTPException(
                     status_code=response.status,
                     detail=f"AI ERROR: {error_detail}"
