@@ -4,3 +4,4 @@ google-generativeai
 python-dotenv~=1.0.1
 google~=3.0.0
 uvicorn~=0.32.0
+aiohttp
