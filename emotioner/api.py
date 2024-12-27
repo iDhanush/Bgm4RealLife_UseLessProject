@@ -29,7 +29,7 @@ emotion_dict = {
 
 
 @emo_router.post('/get_emotion')
-def emotioner(emotioner_data: EmotionerData):
+async def emotioner(emotioner_data: EmotionerData):
     spoken_text = emotioner_data.spoken_text
     if not spoken_text:
         return {
@@ -39,7 +39,7 @@ def emotioner(emotioner_data: EmotionerData):
     lang = emotioner_data.lang
     prompt = parse_prompt(spoken_text, lang)
     print(prompt)
-    text = generate_ai_output(prompt)
+    text = await generate_ai_output(prompt)
     text = str(text)
     text_json = {}
     for line in text.strip().splitlines():
@@ -61,8 +61,6 @@ def emotioner(emotioner_data: EmotionerData):
     print(emotion_files)
     # select random file from list
     random_file = random.choice(emotion_files)
-    print(random_file)
-    print(random_file)
     file_path = f'{Var.base_url}/bgm_col/{emotion_folder}/{random_file}'
     return {
         'bgm': file_path,
